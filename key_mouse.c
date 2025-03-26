@@ -6,7 +6,7 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:13:56 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/26 17:44:53 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 20:19:29 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ int	mouse_zoom(int button, int x, int y, t_data *data)
 
 	if (button == 4 || button == 5)
 	{
-		zoom = (button == 4) ? (1.0 / ZOOM_FACTOR) : ZOOM_FACTOR;
+		if (button == 4)
+			zoom = 1.0 / ZOOM_FACTOR;
+		else
+			zoom = ZOOM_FACTOR;
 		mouse_re = data->min_re + (x / (double)WIDTH) * (data->max_re
 				- data->min_re);
 		mouse_im = data->max_im - (y / (double)HEIGHT) * (data->max_im
@@ -34,9 +37,10 @@ int	mouse_zoom(int button, int x, int y, t_data *data)
 	}
 	return (0);
 }
+
 int	key_hook(int keycode, t_data *data)
 {
-	double step;
+	double	step;
 
 	if (keycode == 65307)
 	{

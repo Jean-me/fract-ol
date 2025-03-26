@@ -6,7 +6,7 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:04:02 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/26 17:00:17 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 20:16:29 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, unsigned int color)
 	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
 	*(unsigned int *)dst = color;
 }
+
 void	change_color(t_data *data, t_julia *julia)
 {
 	if (data->color_name == ICE)

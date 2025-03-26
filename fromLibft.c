@@ -6,7 +6,7 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:07:21 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/26 17:00:21 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 20:19:40 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t count)
 
 size_t	ft_strlen(const char *str)
 {
-	size_t length;
+	size_t	length;
 
 	length = 0;
 	while (str[length] != '\0')

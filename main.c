@@ -6,7 +6,7 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:13:56 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/26 19:49:05 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 20:14:40 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	before_exit(t_data *data)
 	mlx_destroy_display(data->mlx);
 	free(data->mlx);
 }
+
 int	close_window(t_data *data)
 {
 	before_exit(data);
@@ -52,48 +53,48 @@ int	parse_color(char *arg)
 	return (0);
 }
 
-int	main(int argc, char **argv)
-{
-	t_data data;
+// int	main(int argc, char **argv)
+// {
+// 	t_data data;
 
-	data.min_re = -2.0;
-	data.min_im = -2.0;
-	data.max_re = 2.0;
-	data.max_im = 2.0;
+// 	data.min_re = -2.0;
+// 	data.min_im = -2.0;
+// 	data.max_re = 2.0;
+// 	data.max_im = 2.0;
 
-	data.c_re = -0.4;
-	data.c_im = 0.6; // 固定パラメータ（変更可能）
-	if (argc != 3)
-	{
-		ft_printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
-			argv[0]);
-		return (1);
-	}
+// 	data.c_re = -0.4;
+// 	data.c_im = 0.6; // 固定パラメータ（変更可能）
+// 	if (argc != 3)
+// 	{
+// 		ft_printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
+// 			argv[0]);
+// 		return (1);
+// 	}
 
-	data.mlx = mlx_init();
-	// 画面出す
-	data.win = mlx_new_window(data.mlx, 800, 800, "fract-ol");
-	// 画像を作成
-	data.img = mlx_new_image(data.mlx, 800, 800);
-	// 画像のメモリアドレスを取得
-	data.addr = mlx_get_data_addr(data.img, &data.bits_per_pixel,
-			&data.line_length, &data.endian);
-	// //画像をウィンドウに表示
-	data.name = parse_fractal(argv[1]);
-	data.color_name = parse_color(argv[2]);
-	if (data.name == 0 || data.color_name == 0)
-	{
-		ft_printf("Invalid arguments\n");
-		ft_printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
-			argv[0]);
-		return (1);
-	}
+// 	data.mlx = mlx_init();
+// 	// 画面出す
+// 	data.win = mlx_new_window(data.mlx, 800, 800, "fract-ol");
+// 	// 画像を作成
+// 	data.img = mlx_new_image(data.mlx, 800, 800);
+// 	// 画像のメモリアドレスを取得
+// 	data.addr = mlx_get_data_addr(data.img, &data.bits_per_pixel,
+// 			&data.line_length, &data.endian);
+// 	// //画像をウィンドウに表示
+// 	data.name = parse_fractal(argv[1]);
+// 	data.color_name = parse_color(argv[2]);
+// 	if (data.name == 0 || data.color_name == 0)
+// 	{
+// 		ft_printf("Invalid arguments\n");
+// 		ft_printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
+// 			argv[0]);
+// 		return (1);
+// 	}
 
-	draw_fractal(&data, data.name);
-	mlx_put_image_to_window(data.mlx, data.win, data.img, 0, 0);
-	mlx_hook(data.win, DestroyNotify, StructureNotifyMask, close_window, &data);
-	mlx_mouse_hook(data.win, mouse_zoom, &data);
-	mlx_hook(data.win, KeyPress, KeyPressMask, key_hook, &data);
-	mlx_loop(data.mlx);
-	return (0);
-}
+// 	draw_fractal(&data, data.name);
+// 	mlx_put_image_to_window(data.mlx, data.win, data.img, 0, 0);
+// 	mlx_hook(data.win, DestroyNotify, StructureNotifyMask, close_window, &data);
+// 	mlx_mouse_hook(data.win, mouse_zoom, &data);
+// 	mlx_hook(data.win, KeyPress, KeyPressMask, key_hook, &data);
+// 	mlx_loop(data.mlx);
+// 	return (0);
+// }
