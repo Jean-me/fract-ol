@@ -1,6 +1,6 @@
 # fractol
 NAME		=	fractol
-SRCS		=	main.c draw_shape.c fromLibft.c key_mouse.c
+SRCS		=	main.c draw_shape.c fromLibft.c key_mouse.c check_argv.c
 OBJS 		=	$(SRCS:%.c=%.o)
 # Compiler
 CC			=	cc

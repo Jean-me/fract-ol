@@ -96,5 +96,7 @@ int					pr_puthex(unsigned int n, int uppercase);
 int					pr_putpointer(uintptr_t ptr);
 int					pr_0x(void);
 int					ft_putstr_fd(const char *s);
+void				set_data(t_data *data);
+int					check_argv(t_data *data, int argc, char **argv);
 
 #endif
