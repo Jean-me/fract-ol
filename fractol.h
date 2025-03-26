@@ -17,8 +17,11 @@
 # include <X11/Xlib.h>
 # include <X11/keysym.h>
 # include <math.h>
+# include <stdarg.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 # define WIDTH 800
 # define HEIGHT 800
 # define MAX_ITER 100
@@ -81,5 +84,17 @@ int					parse_fractal(char *arg);
 int					parse_color(char *arg);
 int					ft_strncmp(const char *s1, const char *s2, size_t count);
 size_t				ft_strlen(const char *str);
+int					ft_printf(const char *format, ...);
+int					support_printf(const char *format, va_list args);
+char				*ft_strchr(const char *s, int c);
+int					pr_putchar(char c);
+int					pr_putnbr(int n);
+int					pr_putstr(const char *s);
+int					pr_unsbase(unsigned int n, const char *base_str);
+int					pr_put_unsigned(unsigned int n);
+int					pr_puthex(unsigned int n, int uppercase);
+int					pr_putpointer(uintptr_t ptr);
+int					pr_0x(void);
+int					ft_putstr_fd(const char *s);
 
 #endif

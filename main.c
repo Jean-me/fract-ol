@@ -6,11 +6,12 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:13:56 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/26 18:43:10 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 19:49:05 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+#include "ft_printf/ft_printf.h"
 #include "mlx.h"
 
 void	before_exit(t_data *data)
@@ -64,7 +65,7 @@ int	main(int argc, char **argv)
 	data.c_im = 0.6; // 固定パラメータ（変更可能）
 	if (argc != 3)
 	{
-		printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
+		ft_printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
 			argv[0]);
 		return (1);
 	}
@@ -82,8 +83,8 @@ int	main(int argc, char **argv)
 	data.color_name = parse_color(argv[2]);
 	if (data.name == 0 || data.color_name == 0)
 	{
-		printf("Invalid arguments\n");
-		printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
+		ft_printf("Invalid arguments\n");
+		ft_printf("Usage: %s [Julia | Mandelbrot] [ROSE | ICE | JAMAICA]\n",
 			argv[0]);
 		return (1);
 	}
