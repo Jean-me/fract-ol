@@ -6,11 +6,11 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:07:21 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/25 19:07:35 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 17:00:21 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fract-ol.h"
+#include "fractol.h"
 #include "mlx.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t count)

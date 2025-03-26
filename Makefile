@@ -7,7 +7,7 @@ CC			=	gcc
 LIBX_FLAGS	=	mlx_linux/libmlx.a -lXext -lX11 -lm
 CFLAGS		=	-Wall -Wextra -Werror -O2
 # Header
-HEADERS = fract-ol.h
+HEADERS = fractol.h
 
 # Rules
 all:		$(NAME)

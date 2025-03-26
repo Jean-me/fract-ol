@@ -6,11 +6,11 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:04:02 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/25 19:39:20 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 17:00:17 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fract-ol.h"
+#include "fractol.h"
 #include "mlx.h"
 
 void	my_mlx_pixel_put(t_data *data, int x, int y, unsigned int color)

@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fract-ol.h                                         :+:      :+:    :+:   */
+/*   fractol.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 18:47:58 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/25 19:38:50 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:58:57 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <X11/X.h>
-#include <X11/Xlib.h>
-#include <X11/keysym.h>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#define WIDTH 800
-#define HEIGHT 800
-#define MAX_ITER 100
-#define ZOOM_FACTOR 1.2
-#define JULIA 1
-#define MANDERBROT 2
-#define ROSE 3
-#define ICE 4
-#define JAMAICA 5
+#ifndef FRACTOL_H
+# define FRACTOL_H
+
+# include <X11/X.h>
+# include <X11/Xlib.h>
+# include <X11/keysym.h>
+# include <math.h>
+# include <stdio.h>
+# include <stdlib.h>
+# define WIDTH 800
+# define HEIGHT 800
+# define MAX_ITER 100
+# define ZOOM_FACTOR 1.2
+# define JULIA 1
+# define MANDERBROT 2
+# define ROSE 3
+# define ICE 4
+# define JAMAICA 5
 
 typedef struct s_data
 {
@@ -78,3 +81,5 @@ int					parse_fractal(char *arg);
 int					parse_color(char *arg);
 int					ft_strncmp(const char *s1, const char *s2, size_t count);
 size_t				ft_strlen(const char *str);
+
+#endif

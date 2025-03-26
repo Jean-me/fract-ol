@@ -6,11 +6,11 @@
 /*   By: mesasaki <mesasaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 19:13:56 by mesasaki          #+#    #+#             */
-/*   Updated: 2025/03/25 19:36:28 by mesasaki         ###   ########.fr       */
+/*   Updated: 2025/03/26 17:44:53 by mesasaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fract-ol.h"
+#include "fractol.h"
 #include "mlx.h"
 
 int	mouse_zoom(int button, int x, int y, t_data *data)
